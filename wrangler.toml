@@ -1,0 +1,23 @@
+name = "voidtube"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "dist"
+
+[ai]
+binding = "AI"
+
+[[kv_namespaces]]
+binding = "USAGE_KV"
+id = "f8806a5b0b2f43839083e99534ba13f7"
+preview_id = "331d440a2db64bdd96a6298ae82a9989"
+
+# Pages secrets (never commit values):
+#   ./scripts/setup-production-secrets.sh
+# Or manually:
+#   npx wrangler pages secret put YOUTUBE_API_KEY --project-name=voidtube
+#   npx wrangler pages secret put POLAR_ORGANIZATION_ID --project-name=voidtube
+#   npx wrangler pages secret put POLAR_WEBHOOK_SECRET --project-name=voidtube
+#   npx wrangler pages secret put TRANSCRIPT_PROXY_URL --project-name=voidtube
+#   npx wrangler pages secret put TRANSCRIPT_PROXY_SECRET --project-name=voidtube
+#   npx wrangler pages secret put YOUTUBE_TRANSCRIPT_AI_TOKEN --project-name=voidtube  # optional commercial
+#   npx wrangler pages secret put POLAR_LIFETIME_BENEFIT_ID --project-name=voidtube
+#   npx wrangler pages secret put POLAR_LIFETIME_PRODUCT_ID --project-name=voidtube

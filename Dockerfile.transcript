@@ -1,0 +1,20 @@
+# Transcript relay for VoidTube (Railway / Render / Fly.io)
+FROM node:22-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+
+COPY server/transcript-proxy-server.js server/transcript-proxy-server.js
+COPY server/lib/ server/lib/
+
+ENV TRANSCRIPT_PROXY_HOST=0.0.0.0
+ENV TRANSCRIPT_PROXY_PORT=8788
+
+EXPOSE 8788
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s \
+  CMD wget -qO- http://127.0.0.1:8788/health || exit 1
+
+CMD ["node", "server/transcript-proxy-server.js"]

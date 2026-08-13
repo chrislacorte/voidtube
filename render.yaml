@@ -1,0 +1,14 @@
+# Render Blueprint — transcript relay only
+# Deploy: connect repo on render.com, set root to this file or create Web Service manually.
+services:
+  - type: web
+    name: voidtube-transcript
+    runtime: docker
+    dockerfilePath: ./Dockerfile.transcript
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: TRANSCRIPT_PROXY_SECRET
+        sync: false
+      - key: TRANSCRIPT_PROXY_PORT
+        value: "8788"

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" role="img" aria-label="VoidTube">
+  <defs>
+    <linearGradient id="vt-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D0EEFF"/>
+      <stop offset="0.5" stop-color="#B8E4FF"/>
+      <stop offset="1" stop-color="#E8F7FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="11" fill="url(#vt-grad)"/>
+  <path d="M16 12v16l12-8-12-8z" fill="#1a4558"/>
+</svg>
